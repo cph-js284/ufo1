@@ -1,0 +1,38 @@
+Timestamp           Explaination                                            Link(s)(if any)
+block1              setting up project infrastructure
+                    reading assignment                                      https://datsoftlyngby.github.io/soft2019fall/UFO/01TheoryLittRevReflect.html
+                    mapping out in head what major parts are needed                    
+                    veryfi memstream knowledge (see what I did there? ;))   https://www.google.com/search?client=ubuntu&hs=KEU&channel=fs&sxsrf=ACYBGNTzG32tgAjeFZiQsSAS50NnYY0tNw%3A1572433057799&ei=oWy5Xbm9MKjrrgSyjZTQBg&q=microsoft+c%23+memstream&oq=microsoft+c%23+memstream&gs_l=psy-ab.3..35i39.1511.1511..2054...0.0..0.68.68.1......0....1..gws-wiz.hAdIx4aVt5k&ved=0ahUKEwj5kd_O6cPlAhWotYsKHbIGBWoQ4dUDCAo&uact=5
+                    microsoftdocs                                           https://docs.microsoft.com/en-us/dotnet/api/system.io.memorystream?view=netframework-4.8             
+                    PROBLEM: system.drawing.image class does not work on linux
+                    google                                                  https://www.google.com/search?client=ubuntu&channel=fs&q=dotnet+core+system.drawing+image&ie=utf-8&oe=utf-8
+                    blog info (trusted microsoft dev)                       https://www.hanselman.com/blog/HowDoYouUseSystemDrawingInNETCore.aspx
+                    Nuget to grab package                                   https://www.nuget.org/packages/System.Drawing.Common
+                    google                                                  https://www.google.com/search?client=ubuntu&channel=fs&q=c%23+convert+byte+to+bit+array&ie=utf-8&oe=utf-8
+                    Verify usage of BitArray Class                          https://stackoverflow.com/questions/11204666/converting-c-sharp-byte-to-bitarray
+block2              Encoding spike, what is UTF7 vs UTF8                    
+                    Programming 
+                    BitArray spike
+block3              Debugging
+                    result makes no sense, tried reading columns instead of rows
+                    Trying to create initial byte differently
+                    google                                                  https://www.google.com/search?client=ubuntu&hs=pjB&channel=fs&sxsrf=ACYBGNSWPOVHpoxstlIX3L1HUbkVDdtiag%3A1572441414396&ei=Ro25XazrF7KnrgSl6oaIBw&q=aschii+table&oq=aschii+table&gs_l=psy-ab.3..0i10l8j0i67j0i10.1181791.1186478..1187145...1.0..0.82.883.12......0....1..gws-wiz.....10..35i362i39j0i131j0j0i10i203.uAskTPyjY8o&ved=0ahUKEwispr3fiMTlAhWyk4sKHSW1AXEQ4dUDCAo&uact=5
+block4              code seems to convert corretly between byte->bits and back
+                    image data still not readable
+                    Realized i dont really need the bit converter (byte[0]%2==0)
+block5              decided to create my own picture to test to verify methods
+                    google                                                  https://www.google.com/search?client=ubuntu&hs=oTs&channel=fs&sxsrf=ACYBGNS7i3AYsKuyRvqlNK68KAAawLaIeg%3A1572446831303&ei=b6K5XeSHEoiJrwSH1qyYAw&q=steganography+decoder&oq=steg&gs_l=psy-ab.3.0.35i39j0i67j0l8.6271.9871..12086...3.2..2.91.1396.20......0....1..gws-wiz.....10..0i71j0i22i30j35i362i39j0i131j0i10i67.AARI_8ZUOz4
+                    create own test image                                   https://stylesuxx.github.io/steganography/                                        
+block6              Realized there is a diff in byte size between original image and stegna image -> investigate 
+                    google                                                  https://www.google.com/search?client=ubuntu&channel=fs&q=steganography+tutorial&ie=utf-8&oe=utf-8
+                    tutorial                                                https://www.edureka.co/blog/steganography-tutorial
+block7              tutorial                                                https://www.boiteaklou.fr/Steganography-Least-Significant-Bit.html                   
+block8              Having problems converting between png and and bitmap (since C#)
+                    suspecting that the image on the excercise page is compressed, will not spend more time untill confirmed otherwise
+DAY2
+block9              google                                                  https://www.google.com/search?client=ubuntu&hs=V3F&channel=fs&sxsrf=ACYBGNQ27BkyjzHCmv4g1xYj6JGQLuHK7A:1572537450853&q=copy+picture+from+web+no+compression&spell=1&sa=X&ved=0ahUKEwjMy53B7sblAhUzxMQBHf_4CLoQBQgsKAA&biw=1299&bih=616                    
+                    google                                                  https://www.google.com/search?client=ubuntu&hs=iZv&channel=fs&sxsrf=ACYBGNTqQsP-BCciK5-fAp9-Hfns495Z1Q%3A1572538169136&ei=OQe7XbyFCIeFmwXrlIyoBg&q=does+github+use+picture+compression&oq=does+github+use+picture+compression&gs_l=psy-ab.3...7299.10444..10749...0.0..0.72.599.9......0....1..gws-wiz.......35i304i39.E20Cb6uCcKY&ved=0ahUKEwj8hd6X8cblAhWHwqYKHWsKA2UQ4dUDCAo&uact=5
+                    google                                                  https://www.google.com/search?client=ubuntu&hs=tZv&channel=fs&sxsrf=ACYBGNTOdUR9g9oQZbpUJVbkiRabFwejYg%3A1572538180792&ei=RAe7XYCDMIuvmwXsz4TQDA&q=github+get+raw+picturedata&oq=github+get+raw+picturedata&gs_l=psy-ab.3..33i160l2.44433.52825..55424...1.0..2.89.4324.60......0....1..gws-wiz.....10..35i39j35i362i39j35i39i19j0i67j0i131i67j0i131j0j0i203j0i22i30j33i22i29i30j33i21.RSo6kgH2ELw&ved=0ahUKEwiAtaWd8cblAhWL16YKHewnAcoQ4dUDCAo&uact=5
+                    getting raw picture data from github                    https://github.com/PyGithub/PyGithub/issues/576
+                    switched to different operating system (linux -> windows) same gibberish
+block10             code clean up, github setup, handin.                
