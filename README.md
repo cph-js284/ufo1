@@ -1,5 +1,5 @@
 # What is this
-This is a handin for assingment1 UFO. Since the code in not the mainpoint of the assignment, it has not been wrapped in a docker container, dotent core 3.0 must be install on machine in order to run it. However the output is pasted below.
+This is a handin for assingment1 UFO. Since the code in not the mainpoint of the assignment, it has not been wrapped in a docker container, dotnet core 3.0 must be install on machine in order to run it. However the output is pasted below.
 
 # Worklog
 The file worklog.txt is where I have documented the work process.
